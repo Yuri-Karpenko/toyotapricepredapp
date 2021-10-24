@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body style="max-width: 500px; margin: auto;">
+	<div style="height: 100px;"></div>
+	<h2>Toyota Car Sale Price Prediction</h2>
+
+	<div>
+		<form action="/result" method="POST">
+			<label for="model">Model</label>
+			<select name="model">
+				<option value="0">Auris</option>
+				<option value="1">Avensis</option>
+				<option value="2">Aygo</option>
+				<option value="3">C-HR</option>
+				<option value="4">Camry</option>
+				<option value="5">Corolla</option>
+				<option value="6">GT86</option>
+				<option value="7">Hilux</option>
+				<option value="8">IQ</option>
+				<option value="9">Land Cruiser</option>
+				<option value="10">PROACE VERSO</option>
+				<option value="11">Prius</option>
+				<option value="12">RAV4</option>
+				<option value="13">Supra</option>
+				<option value="14">Urban Cruiser</option>
+				<option value="15">Verso</option>
+				<option value="16">Verso-S</option>
+				<option value="17">Yaris</option>
+			</select>
+			<br>
+			<label for="year">Year</label>
+			<input type="number" name="year" required pattern="[0-9]{4}" size="4" min="1900" max="2022">
+			<br>
+			<label for="transmission">Transmission</label>
+			<select name="transmission">
+				<option value="0">Automatic</option>
+				<option value="1">Manual</option>
+				<option value="2">Other</option>
+				<option value="3">Semi-Auto</option>
+			</select>
+			<br>
+			<label for="mileage">Mileage</label>
+			<input type="text" name="mileage" required pattern="\d+.?\d+">
+			<br>
+			<label for="fuel">Fuel Type</label>
+			<select id="fuel" name="fuel">
+				<option value="0">Diesel</option>
+				<option value="1">Hybrid</option>
+				<option value="2">Other</option>
+				<option value="3">Gasoline</option>
+			</select>
+			<br>
+			<label for="mpg">MPG</label>
+			<input type="text" name="mpg" required pattern="\d+.?\d+">
+			<br>
+			<label for="engineSize">Engine Size</label>
+			<input type="text" name="engineSize" required pattern="\d+.?\d+">
+			<br>
+			<br>
+			<input type="submit" value="Predict Price">
+		</form>
+	</div>
+	<div style="height: 100px;"></div>
+    <div>
+        <button onclick="location.href='/forgeeks'" type="button">
+            I'm a Geek</button>
+    </div>
+	<div style="height: 100px;"></div>
+</body>
+
+</html>

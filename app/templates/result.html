@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body style="max-width: 500px; margin: auto;">
+    <div style="height: 100px;"></div>
+    <h2>The estimated price of your vehicle is:</h2>
+    <h2> $ {{ prediction }}</h2>
+    <div>
+        <button onclick="location.href='/'" type="button">
+            Go to Home Page</button>
+    </div>
+    <div style="height: 100px;"></div>
+    <div>
+        <button onclick="location.href='/forgeeks'" type="button">
+            I'm a Geek</button>
+    </div>
+    <div style="height: 100px;"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body style="max-width: 500px; margin: auto;">
+    <div style="height: 100px;"></div>
+    <div>
+        <p>Hello friend!</p>
+        <p>Since you clicked this link, you must be interested in how this predictor works. Let me explain briefly.</p>
+        <p>First of all, I have to tell you that this app uses a model built with the RandomForestRegressor.
+             We used data available on Kaggle to build this model. Here are a few facts about that data.
+        </p>
+        <p>Here is the price distribution of all the cars available in our dataset:</p>
+    </div>
+    <img src="{{ href }}" height=600 />
+    <p>After we have loaded the data and looked at the features, we came up with this features correlation heatmap. 
+        It shows that there is no super strong correlation between any 2 features, so we are keeping all of them for our model.
+    </p>
+    <img src="{{ href2 }}" height=600 />
+    <p>Finally, after we built the model, we could analyze feature importances. And here is a histogram of those feature importances for your edification:</p>
+    <img src="{{ href3 }}" height=600 />
+    <p>If you have any questions, feel free to contact us.</p>
+    <div>
+        <button onclick="location.href='/'" type="button">
+            Go to Home Page</button>
+    </div>
+    <div style="height: 100px;"></div>
+    <div>
+        <button onclick="location.href='/forgeeks'" type="button">
+            I'm a Geek</button>
+    </div>
+    <div style="height: 100px;"></div>
+</body>
+
+</html>
